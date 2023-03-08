@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace BasicCalculator
 {
@@ -6,25 +6,25 @@ namespace BasicCalculator
     {
         static void Main(string[] args)
         {
-            do 
+            do
             {
-                
+
                 double no1 = 0;
                 double no2 = 0;
                 double result = 0;
 
-                Console.WriteLine("+ : Add");
-                Console.WriteLine("- : Subtract");
-                Console.WriteLine("* : Multiply");
-                Console.WriteLine("/ : Divide");
-                Console.WriteLine("Choose an operator: ");
+                Console.WriteLine("\t+ : Add");
+                Console.WriteLine("\t- : Subtract");
+                Console.WriteLine("\t* : Multiply");
+                Console.WriteLine("\t/ : Divide");
+                Console.WriteLine("\nChoose an operator: ");
                 string op = Console.ReadLine();
 
                 Console.WriteLine("Enter first number: ");
-                no1 = Convert.ToDouble(Console.ReadKey());
+                no1 = Convert.ToDouble(Console.ReadLine());
 
                 Console.WriteLine("Enter second number: ");
-                no2 = Convert.ToDouble(Console.ReadKey());
+                no2 = Convert.ToDouble(Console.ReadLine());
 
                 switch (op)
                 {
@@ -48,9 +48,9 @@ namespace BasicCalculator
                         Console.WriteLine("That was not a valid option");
                         break;
                 }
-                Console.Write("Would you like to restart? (y/n): ");
+                Console.Write("\t\nWould you like to restart? (y/n): ");
             } while (Console.ReadLine() == "y");
-        
+
             Console.WriteLine("Goodbye!");
             Console.ReadKey();
         }
