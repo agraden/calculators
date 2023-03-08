@@ -45,6 +45,10 @@ namespace BasicCalculator
                     Console.WriteLine("That was not a valid option");
                     break;
             }
-        }
+            Console.Write("Would you like to restart? (y/n): ");
+        } while (Console.ReadLine() == "y");
+        
+        Console.WriteLine("Goodbye!");
+        Console.ReadKey();
     }
 }
