@@ -8,10 +8,7 @@ namespace BasicCalculator
         {
             do
             {
-
-                double no1 = 0;
-                double no2 = 0;
-                double result = 0;
+                double no1, no2, result = 0;
 
                 Console.WriteLine("\t+ : Add");
                 Console.WriteLine("\t- : Subtract");
@@ -33,21 +30,29 @@ namespace BasicCalculator
                         Console.WriteLine($"Your result: {no1} + {no2} = " + result);
                         break;
                     case "-":
-                        result = no1 + no2;
-                        Console.WriteLine($"Your result: {no1} + {no2} = " + result);
+                        result = no1 - no2;
+                        Console.WriteLine($"Your result: {no1} - {no2} = " + result);
                         break;
                     case "*":
-                        result = no1 + no2;
-                        Console.WriteLine($"Your result: {no1} + {no2} = " + result);
+                        result = no1 * no2;
+                        Console.WriteLine($"Your result: {no1} * {no2} = " + result);
                         break;
                     case "/":
-                        result = no1 + no2;
-                        Console.WriteLine($"Your result: {no1} + {no2} = " + result);
+                        if (no2 == 0)
+                        {
+                            Console.WriteLine("Cannot divide by zero...");
+                        }
+                        else
+                        {
+                            result = no1 / no2;
+                            Console.WriteLine($"Your result: {no1} / {no2} = " + result);
+                        }
                         break;
                     default:
                         Console.WriteLine("That was not a valid option");
                         break;
                 }
+
                 Console.Write("\t\nWould you like to restart? (y/n): ");
             } while (Console.ReadLine() == "y");
 
